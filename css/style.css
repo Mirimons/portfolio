@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20&display=swap');
+/* link da fonte através do google fonts */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("../img/dark-mode.jpg") no-repeat top center/cover;
+}
+/* "../" serve para voltar uma pasta, como estamos na pasta do css precisa voltar para ir pra pasta do img */
+
+a {
+    text-decoration: none;
+}
+
+a, p, footer, li { /* separar elementos com a vírgula para não repetir a mesma coisa */
+    color: white;
+}
+/* --> body * <-- (também muda todos os elementos escritos, ao invés de escrever um por um e colocar vírgula) */
+
+p {
+    font-family: "Jersey 20", sans-serif;
+}
+
+.container {
+    max-width: 580px;
+    margin: 50px auto;
+    padding: 0px 25px;
+}
+
+.perfil {
+    text-align: center;
+    padding: 25px 0;
+}
+
+.perfil img {
+    width: 115px;
+    border-radius: 100%;
+}
