@@ -2,41 +2,67 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="perfil">
-            <img src="img/temadark.jpeg" alt="Foto de uma mulher maquiada de óculos e cabelo liso, com uma roupa preta.">
+    <div id="container">
+        <div id="profile">
+            <img 
+                class="profile-photo"
+                src="img/temadark.jpeg" 
+                alt="Foto de uma mulher maquiada de óculos e cabelo liso, com uma roupa preta.">
             <p>@Miriã_Tomé ✨🌠</p> 
             <!-- atalho: Windows + "." abre aba de emojis -->
         </div>
 
+        <div id="switch" onclick="toggleMode()">
+            <button></button>
+            <span></span>
+        </div>
+
         <ul>
             <li>
-                <a href="">Um pouco sobre mim</a>
+                <a href="#">
+                    Um pouco sobre mim
+                </a>
             </li>
 
             <li>
-                <a href="">Baixar currículo</a>
+                <a href="#">
+                    Baixar currículo
+                </a>
             </li>    
 
             <li>
-                <a href="">Ver meu Portfólio</a>
+                <a href="">
+                    Ver meu Portfólio
+                </a>
             </li>
 
             <li>
-                <a href="">Projetos realizados</a>
+                <a href="#" target="_blank">
+                    Projetos realizados
+                </a>
             </li>
         </ul>
 
-        <div>
-            <a href=""> <ion-icon name="logo-github"></ion-icon> </a>
-            <a href=""> <ion-icon name="logo-linkedin"></ion-icon> </a>
-            <a href=""> <ion-icon name="logo-instagram"></ion-icon> </a>
-            <a href=""> <ion-icon name="logo-discord"></ion-icon> </a>
+        <div id="social-links">
+            <a href="" target="_blank"> 
+                <ion-icon name="logo-github"></ion-icon> 
+            </a>
+            <a href="" target="_blank"> 
+                <ion-icon name="logo-linkedin"></ion-icon> 
+            </a>
+            <a href="" target="_blank"> 
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a href="" target="_blank"> 
+                <ion-icon name="logo-discord"></ion-icon> 
+            </a>
         </div>
         
         <footer>
@@ -44,7 +70,6 @@
         </footer>
 
     </div>
-    
     <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"> </script>
 </body>
 </html>

@@ -8,35 +8,119 @@
 }
 
 body {
-    background: url("../img/dark-mode.jpg") no-repeat top center/cover;
+    background: url("../img/dark-mode.jpg") no-repeat top center/cover; /* "../" serve para voltar uma pasta, como estamos na pasta do css precisa voltar para ir pra pasta do img */
+    height: 100vh;
 }
-/* "../" serve para voltar uma pasta, como estamos na pasta do css precisa voltar para ir pra pasta do img */
+
+body * { /* --> a, p, foother, li <-- (também muda todos os elementos escritos, separar elementos com a vírgula para não repetir a mesma coisa) */
+    color: white;
+}
 
 a {
     text-decoration: none;
 }
 
-a, p, footer, li { /* separar elementos com a vírgula para não repetir a mesma coisa */
-    color: white;
-}
-/* --> body * <-- (também muda todos os elementos escritos, ao invés de escrever um por um e colocar vírgula) */
-
 p {
     font-family: "Jersey 20", sans-serif;
 }
 
-.container {
-    max-width: 580px;
-    margin: 50px auto;
+#container {
+    width: 100%;
+    max-width: 588px;
+    margin: 50px auto 0px;
     padding: 0px 25px;
 }
 
-.perfil {
+#profile {
     text-align: center;
     padding: 25px 0;
 }
 
-.perfil img {
+#profile img {
     width: 115px;
     border-radius: 100%;
+}
+
+#profile p {
+    font-weight: 500;
+    line-height: 25px;
+    margin-top: 8px;
+}
+
+#switch {
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+
+#switch button{
+    width: 32px;
+    height: 32px;
+    background: white url(../img/moon-stars.svg) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+    animation: slide-back 0.2s;
+}
+
+.light #switch button {
+    animation: slide-in 0.2s forwards;
+    background: white url(../img/sun.svg) no-repeat center;
+}
+
+#switch button:hover {
+    outline: 8px solid rgba(255, 255, 255, 0.2);
+}
+
+#switch span {
+    display: block;
+    width: 64px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
+
+.light #switch span {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 25px 0;
+}
+
+ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 16px 25px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+ul li a:hover {
+    background: rgba(0, 0, 0, 0.02);
+    border: 1.5px solid white;
+}
+
+.light ul li a {
+    background: rgba(0, 0, 0, 0.02);
+    border: 1.5px solid black;
 }
